@@ -1,0 +1,128 @@
+.banner
+  overflow: hidden
+  position: relative
+
+  &__slider
+
+  &__item
+    outline: none
+
+    position: relative
+
+  &__image
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+
+  &__box
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .-banner-content-right &
+      justify-content: flex-end
+      margin-right: 45px
+      +MAX(767px)
+        justify-content: center
+        margin-right: 0
+
+    .-banner-content-left &
+      justify-content: flex-start
+      margin-left: 45px
+      +MAX(767px)
+        justify-content: center
+        margin-left: 0
+
+  &__content
+    display: none
+    &.-banner-content-show
+      display: block
+
+  &__text
+    transition: color .15s ease-in-out
+
+    display: block
+    text-align: center
+
+    +fontOpenSans
+    font-weight: 300
+    line-height: 1
+    color: white
+
+    cursor: default
+
+    h1
+      font-size: 78px
+      +MAX(767px)
+        font-size: 36px
+
+    h2
+      font-size: 41px
+      +MAX(767px)
+        font-size: 24px
+
+    a.banner__item:hover &
+      cursor: pointer
+      text-decoration: none
+
+  &__toggler
+    display: flex
+    align-items: center
+    justify-content: center
+
+    margin: 20px auto 5px
+
+    height: 48px
+    width: 48px
+
+    cursor: pointer
+
+    outline: none
+
+    +MAX(1025px)
+      display: none
+
+    i
+      margin-top: 5px
+      margin-left: 2px
+      +fontMaterial
+      font-size: 48px
+      line-height: 1
+      color: white
+
+  &__toolbar
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 10px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+
+  &__dots
+    margin: 0 3px
+    ul
+      display: flex
+
+  &__dot
+    transition: background-color .15s ease-in-out
+
+    margin: 0 3px
+    width: 5px
+    height: 5px
+    cursor: pointer
+
+    background-color: rgba(0, 0, 0, 0.5)
+
+    .slick-active &
+      background-color: rgba(255, 255, 255, 0.8)
+
+    &:hover
+      background-color: rgba(255, 255, 255, 1)

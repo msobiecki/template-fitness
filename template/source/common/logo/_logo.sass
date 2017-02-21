@@ -1,0 +1,69 @@
+.logo
+  display: inline-flex
+  align-items: center
+
+  &:hover
+    text-decoration: none
+
+  &__icon
+    transition: color .15s ease-in-out, background-color .15s ease-in-out
+    display: flex
+    width: 28px
+    height: 28px
+    align-items: center
+    justify-content: center
+
+    +fontArvo
+    font-size: 16px
+    line-height: 1
+
+    color: #4b4e53
+    border: 2px solid #4b4e53
+
+    .logo:hover &
+      color: white
+      background-color: #4b4e53
+
+    .-header-landingPage-background &
+      color: white
+      background-color: #4b4e53
+
+    .-footsite-logo &
+      color: white
+      border: 2px solid white
+
+
+  &__title
+    transition: opacity .5s ease-in-out
+    margin-left: 5px
+
+    +fontOpenSans
+    font-size: 14px
+    color: #4b4e53
+    line-height: 1
+
+    opacity: 0.45
+
+    .logo:hover &
+      opacity: 1
+
+    .-footsite-logo &
+      color: white
+      opacity: 1
+
+  &__text
+    transition: opacity .5s ease-in-out
+    margin-left: 5px
+
+    +fontOpenSans
+    font-size: 10px
+    color: #4b4e53
+    line-height: 1
+
+    opacity: 0.2
+
+    .logo:hover &
+      opacity: 1
+
+    .-footsite-logo &
+      color: white

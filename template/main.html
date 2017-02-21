@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Szablon</title>
+    <meta charset="utf-8">
+    <meta name="title" content="Szablon">
+    <meta name="description" content="Szablon opis">
+    <meta name="keywords" content="Szablon keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="source/layout/favicon/src/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="source/layout/favicon/src/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="source/layout/favicon/src/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="source/layout/favicon/src/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="source/layout/favicon/src/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="source/layout/favicon/src/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="source/layout/favicon/src/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="source/layout/favicon/src/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="source/layout/favicon/src/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="source/layout/favicon/src/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="source/layout/favicon/src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="source/layout/favicon/src/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="source/layout/favicon/src/favicon-16x16.png">
+    <link rel="manifest" href="source/layout/favicon/src/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="source/layout/favicon/src/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+      document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+        + ':35729/livereload.js"></'
+        + 'script>')
+    </script>
+  </head>
+  <body>
+    <div class="loader js-loader"><img class="loader__icon" src="source/layout/loader/src/three-dots.svg" alt="Loading..."></div>
+    <!-- Header-->
+    <header class="header js-header -header-landingPage -header-fixed">
+      <div class="header__wrapper">
+        <div class="header__content">
+          <div class="header__container">
+            <div class="header__box">
+              <div class="header__item">
+                <!--Logo--><a class="logo" href="#" title="Home Page">
+                  <div class="logo__icon">T</div>
+                  <div class="logo__content">
+                    <div class="logo__title">TAKE</div>
+                    <div class="logo__text">by MSOBIECKI</div>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Content-->
+    <div class="content js-content">
+      <div class="banner js-banner js-banner-slick">
+        <div class="banner__slider" data-slick="{&quot;speed&quot;: 3000, &quot;autoplaySpeed&quot;: 5000}">
+          <div class="banner__item">
+            <div class="banner__image" style="background-image: url('source/components/banner/src/banner-one.jpg');" alt="Mountains"></div>
+            <div class="banner__box">
+              <div class="banner__content">
+                <div class="banner__text">
+                  <h2>ZNAJDŹ PODRÓŻ</h2>
+                  <h1>IDEALNĄ DLA SIEBIE</h1>
+                </div><span class="banner__toggler" data-href="#contentPage" title="Przejdź dalej"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+            </div>
+          </div><a class="banner__item -banner-content-left" href="#">
+            <div class="banner__image" style="background-image: url('source/components/banner/src/banner-one.jpg');" alt="Mountains"></div>
+            <div class="banner__box">
+              <div class="banner__content">
+                <div class="banner__text">
+                  <h2>ZNAJDŹ PODRÓŻ</h2>
+                  <h1>IDEALNĄ DLA SIEBIE</h1>
+                </div><span class="banner__toggler" data-href="#contentPage" title="Przejdź dalej"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+            </div></a><a class="banner__item -banner-content-right" href="#">
+            <div class="banner__image" style="background-image: url('source/components/banner/src/banner-one.jpg');" alt="Mountains"></div>
+            <div class="banner__box">
+              <div class="banner__content">
+                <div class="banner__text">
+                  <h2>ZNAJDŹ PODRÓŻ</h2>
+                  <h1>IDEALNĄ DLA SIEBIE</h1>
+                </div><span class="banner__toggler" data-href="#contentPage" title="Przejdź dalej"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+            </div></a>
+        </div>
+        <div class="banner__toolbar">
+          <div class="banner__dots"></div>
+        </div>
+      </div>
+      <!-- Content Blocks-->
+      <section class="content__blocks" id="contentPage"></section>
+    </div>
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__box">
+          <div class="footer__item">
+            <!-- Footer-details-->
+            <div class="footer-details">
+              <div class="footer-details__box">
+                <div class="footer-details__item">
+                  <h3 class="footer-details__title">Get in touch</h3>
+                  <div class="footer-details__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+                <div class="footer-details__item">
+                  <h3 class="footer-details__title">Resources</h3>
+                  <div class="footer-details__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+                <div class="footer-details__item">
+                  <h3 class="footer-details__title">Features</h3>
+                  <div class="footer-details__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                </div>
+                <div class="footer-details__item">
+                  <h3 class="footer-details__title">How To's</h3>
+                  <div class="footer-details__menu"><a class="footer-details__link" href="#">Tour</a><a class="footer-details__link" href="#">Customers</a><a class="footer-details__link" href="#">Pricing and Plans</a><a class="footer-details__link" href="#">New Features</a><a class="footer-details__link" href="#">Education</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__item">
+            <!-- Footer-newsletter-->
+            <div class="footer-newsletter">
+              <div class="footer-newsletter__title">Stay in touch</div>
+              <div class="footer-newsletter__content">
+                <div class="footer-newsletter__inputbox">
+                  <input class="footer-newsletter__input">
+                  <button class="footer-newsletter__submit"><i class="material-icons">check</i></button>
+                </div>
+                <div class="footer-newsletter__text">We don't send spam. Actually, who are we kiding we'll spam the shit out of your inbox.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Arrow Scroll--><span class="arrow js-arrow"><i class="material-icons">keyboard_arrow_up</i></span>
+    <!--Scripts-->
+    <script src="scripts/main.min.js"></script>
+  </body>
+</html>

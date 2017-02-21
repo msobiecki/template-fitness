@@ -1,0 +1,690 @@
+/* Vendors
+ * Contains all the 3rd party styles
+ * ========================================================================== */
+@import url(../node_modules/animate.css/animate.min.css);
+@import url(../node_modules/slick-carousel/slick/slick.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Utils
+ * Contains all mixins, functions and helpers
+ * ========================================================================== */
+/* RESOLUTIONS
+ *============================================================================ */
+/* DEVICES REGION
+ *========================================================================== */
+/* Mobile 0px -> 480px -> 600px -> 767px
+ *-------------------------------------------------------------------------- */
+/* Tablet 768px -> 800px -> 969px
+ *-------------------------------------------------------------------------- */
+/* LAPTOP 970px -> 1199px
+ *-------------------------------------------------------------------------- */
+/* PC 1200px ->
+ *-------------------------------------------------------------------------- */
+/* Base
+ * Contains all the global styles for the application as well as the resets, typography, colors, buttons, etc...
+ * You should also define a _variables.scss to define all app variables
+ * ========================================================================== */
+/* WEBSITE FONTS
+ *========================================================================== */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #222626;
+  background: #ffffff;
+}
+
+a {
+  color: #222626;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Layout
+ * Contains styling elements for the larger 'core' modules like loading bars / indicators, wrappers, containers, etc...
+ * ========================================================================== */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #192431;
+}
+
+.loader__icon {
+  height: 80px;
+  width: 80px;
+}
+
+.arrow {
+  transition: color .15s ease-in-out;
+  z-index: 2;
+  position: fixed;
+  height: 36px;
+  width: 36px;
+  right: 5px;
+  bottom: 5px;
+  display: none;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: #343434;
+}
+
+.arrow.-visible {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.arrow i {
+  font-size: 28px;
+}
+
+/* Common
+ *========================================================================== */
+.header {
+  min-height: 64px;
+}
+
+.header__wapper {
+  min-height: 64px;
+}
+
+.header__content {
+  transition: background-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  display: block;
+  width: 100%;
+  min-height: 64px;
+  background-color: white;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+}
+
+.-header-fixed .header__content {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.-header-landingPage .header__content {
+  background-color: transparent;
+  box-shadow: 0 1px 15px transparent;
+}
+
+.-header-landingPage-background .header__content {
+  background-color: white;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+}
+
+.header__container {
+  padding: 0 25px;
+}
+
+.header__box {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 64px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.logo {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.logo__icon {
+  transition: color .15s ease-in-out, background-color .15s ease-in-out;
+  display: -ms-flexbox;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-family: 'Arvo', serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #4b4e53;
+  border: 2px solid #4b4e53;
+}
+
+.logo:hover .logo__icon {
+  color: white;
+  background-color: #4b4e53;
+}
+
+.-header-landingPage-background .logo__icon {
+  color: white;
+  background-color: #4b4e53;
+}
+
+.-footsite-logo .logo__icon {
+  color: white;
+  border: 2px solid white;
+}
+
+.logo__title {
+  transition: opacity .5s ease-in-out;
+  margin-left: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #4b4e53;
+  line-height: 1;
+  opacity: 0.45;
+}
+
+.logo:hover .logo__title {
+  opacity: 1;
+}
+
+.-footsite-logo .logo__title {
+  color: white;
+  opacity: 1;
+}
+
+.logo__text {
+  transition: opacity .5s ease-in-out;
+  margin-left: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: #4b4e53;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+.logo:hover .logo__text {
+  opacity: 1;
+}
+
+.-footsite-logo .logo__text {
+  color: white;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+.footer {
+  background-color: #192431;
+  padding: 80px 0;
+}
+
+@media (max-width: 969px) {
+  .footer {
+    padding: 45px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 25px 0;
+  }
+}
+
+.footer__container {
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+  max-width: 1230px;
+}
+
+.footer__container:before, .footer__container:after {
+  content: " ";
+  display: table;
+}
+
+.footer__container:after {
+  clear: both;
+}
+
+@media (max-width: 969px) {
+  .footer__container {
+    padding: 0 15px;
+  }
+}
+
+.footer__box {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__item {
+  padding: 0 15px;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .footer__item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__item:first-of-type {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__item:last-of-type {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+}
+
+.footer-details__box {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+@media (max-width: 767px) {
+  .footer-details__box {
+    margin: 0 auto;
+  }
+}
+
+.footer-details__item {
+  width: 33.33%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.footer-details__item:first-of-type {
+  width: 100%;
+}
+
+@media (max-width: 969px) {
+  .footer-details__item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-details__item {
+    padding: 0;
+  }
+}
+
+.footer-details__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+.footer-details__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 5px;
+  text-align: justify;
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  .footer-details__text {
+    font-size: 12px;
+  }
+}
+
+.footer-details__menu {
+  display: block;
+  width: 100%;
+}
+
+.footer-details__link {
+  display: block;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 5px;
+  text-align: justify;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .footer-details__link {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+  }
+}
+
+.footer-details__link:hover {
+  text-decoration: underline;
+}
+
+.footer-newsletter__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+.footer-newsletter__inputbox {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter__input {
+  outline: none;
+  width: 100%;
+  border: 0;
+  padding: 0 14px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #192431;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.footer-newsletter__submit {
+  transition: background-color .15s ease-in-out;
+  background-color: #82ca9c;
+  color: white;
+  border: 0;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  font-size: 16px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.footer-newsletter__submit:hover {
+  background-color: #5ebb80;
+}
+
+.footer-newsletter__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #57697f;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+/* Components
+ * Contains each isolated component. Should ideally mimic the Angular component structure
+ * ========================================================================== */
+.banner {
+  overflow: hidden;
+  position: relative;
+}
+
+.banner__item {
+  outline: none;
+  position: relative;
+}
+
+.banner__image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.banner__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.-banner-content-right .banner__box {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-right: 45px;
+}
+
+@media (max-width: 767px) {
+  .-banner-content-right .banner__box {
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-right: 0;
+  }
+}
+
+.-banner-content-left .banner__box {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  margin-left: 45px;
+}
+
+@media (max-width: 767px) {
+  .-banner-content-left .banner__box {
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-left: 0;
+  }
+}
+
+.banner__content {
+  display: none;
+}
+
+.banner__content.-banner-content-show {
+  display: block;
+}
+
+.banner__text {
+  transition: color .15s ease-in-out;
+  display: block;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  color: white;
+  cursor: default;
+}
+
+.banner__text h1 {
+  font-size: 78px;
+}
+
+@media (max-width: 767px) {
+  .banner__text h1 {
+    font-size: 36px;
+  }
+}
+
+.banner__text h2 {
+  font-size: 41px;
+}
+
+@media (max-width: 767px) {
+  .banner__text h2 {
+    font-size: 24px;
+  }
+}
+
+a.banner__item:hover .banner__text {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.banner__toggler {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 20px auto 5px;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 1025px) {
+  .banner__toggler {
+    display: none;
+  }
+}
+
+.banner__toggler i {
+  margin-top: 5px;
+  margin-left: 2px;
+  font-family: 'Material Icons';
+  font-size: 48px;
+  line-height: 1;
+  color: white;
+}
+
+.banner__toolbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+}
+
+.banner__dots {
+  margin: 0 3px;
+}
+
+.banner__dots ul {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner__dot {
+  transition: background-color .15s ease-in-out;
+  margin: 0 3px;
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slick-active .banner__dot {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.banner__dot:hover {
+  background-color: white;
+}
