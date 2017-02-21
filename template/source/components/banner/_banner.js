@@ -64,7 +64,8 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: false,
-        autoplay: true,
+        //TODO Switch Autoplay on production
+        autoplay: false,
         speed: 3000
       });
       this.$item = this.$el.find('.banner__item');

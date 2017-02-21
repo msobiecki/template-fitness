@@ -7,13 +7,19 @@ html( lang="pl")
   body
     include loader/_loader
 
-    include ../common/header/_header
+    .wrapper.js-wrapper
+      .wrapper__menu.-menu-wrapped
+        include ../common/menu/_menu
 
-    // Content
-    .content.js-content
-      block content
+      .wrapper__page
 
-    include ../common/footer/_footer
+        include ../common/header/_header
+
+        // Content
+        .content.js-content
+          block content
+
+        include ../common/footer/_footer
 
     include arrow/_arrow
 

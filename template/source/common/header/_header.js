@@ -2,7 +2,7 @@
   var header = {
     init: function () {
       this.catchDOM();
-      if (this.isElement()) {
+      if (isElement(this.$el)) {
         this.checkHeader();
       }
     },
@@ -10,9 +10,6 @@
       this.$el = $('.js-header');
       this.$wrapper = this.$el.find('.header__content');
       this.$content = this.$el.find('.header__box');
-    },
-    isElement: function () {
-      return this.$el.length > 0
     },
     checkHeader: function () {
       if (this.$el.hasClass('-header-fixed')) {
@@ -48,6 +45,10 @@
       }
     }
   };
+
+  function isElement(item) {
+    return item.length > 0
+  }
 
   header.init();
 })();
