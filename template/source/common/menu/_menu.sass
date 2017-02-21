@@ -5,10 +5,18 @@
   justify-content: flex-start
   align-items: stretch
 
+  .-menu-wrapped &
+    display: block
+    height: inherit
+
   &__item
     position: relative
     display: flex
     align-items: center
+    flex-wrap: wrap
+
+    .-menu-wrapped &
+      min-height: 44px
 
   &__link
     transition: color .15s ease-in-out
@@ -31,9 +39,13 @@
     .-nav-active &
       color: colors($menu-color, hover)
 
+    .-menu-wrapped &
+      min-height: 44px
+      width: 100%
+
 
   &__dropdown
-    position: relative
+    position: absolute
     right: 0
     top: 0
     height: 44px
@@ -43,6 +55,8 @@
     justify-content: center
     cursor: pointer
     color: white
+    +MIN(1025px)
+      display: none
     &:hover
       color: colors($menu-color, hover)
 
@@ -52,18 +66,32 @@
       &:hover
         color: colors($menu-color, hover)
 
+    .-add
+      display: block
+      .-nav-active &
+        display: none
+
+    .-remove
+      display: none
+      .-nav-active &
+        display: block
+
   &__submenu
     display: none
-    width: 100%
+    width: 200px
     position: absolute
     top: 100%
     left: 0
     right: 0
-    background-color: white
+    background-color: colors($menu-color)
 
     .-nav-active &
       display: block
 
+    .-menu-wrapped &
+      width: 100%
+      position: relative
+      background-color: transparent
 
   &__subitem
     position: relative
@@ -80,7 +108,11 @@
     padding: 7px 15px
     font-weight: 300
     border-top: 1px solid #eeeeee
-    color: colors($text-color, alternative)
+    color: colors($menu-color, alternative)
     &:hover
       color: colors($menu-color)
       background-color: colors($menu-color, hover)
+
+    .-menu-wrapped &
+      color: colors($menu-color)
+      border-top: 1px solid transparent

@@ -34,43 +34,14 @@
   </head>
   <body>
     <div class="loader js-loader"><img class="loader__icon" src="source/layout/loader/src/bars.svg" alt="Loading..."></div>
+    <!-- Wrapper-->
     <div class="wrapper js-wrapper">
-      <div class="wrapper__menu -menu-wrapped">
-        <!-- Menu-->
-        <ul class="menu js-menu">
-          <li class="menu__item"><a class="menu__link" href="#">About</a><span class="menu__dropdown"><i class="material-icons">add</i></span>
-            <ul class="menu__submenu">
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#">How it works</a><span class="menu__dropdown"><i class="material-icons">add</i></span>
-            <ul class="menu__submenu">
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About lorem ipsum el de sol</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><span class="menu__link" href="#">Services</span><span class="menu__dropdown"><i class="material-icons">add</i></span>
-            <ul class="menu__submenu">
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-              <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#">FAQ</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-        </ul>
+      <div class="wrapper__navigation">
+        <!-- Wrapper Close--><span class="wrapper__close"><i class="material-icons">arrow_back</i> CLOSE MENU</span>
+        <!-- Wrapper Navigation-->
+        <div class="wrapper__menu -menu-wrapped">
+          <!--include ../common/menu/_menu-->
+        </div>
       </div>
       <div class="wrapper__page">
         <!-- Header-->
@@ -95,7 +66,7 @@
                         <div class="navigation__menu">
                           <!-- Menu-->
                           <ul class="menu js-menu">
-                            <li class="menu__item"><a class="menu__link" href="#">About</a><span class="menu__dropdown"><i class="material-icons">add</i></span>
+                            <li class="menu__item"><a class="menu__link" href="#">About</a><span class="menu__dropdown"><i class="material-icons -add">add</i> <i class="material-icons -remove">remove</i></span>
                               <ul class="menu__submenu">
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
@@ -105,7 +76,7 @@
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
                               </ul>
                             </li>
-                            <li class="menu__item"><a class="menu__link" href="#">How it works</a><span class="menu__dropdown"><i class="material-icons">add</i></span>
+                            <li class="menu__item"><a class="menu__link" href="#">How it works</a><span class="menu__dropdown"><i class="material-icons -add">add</i> <i class="material-icons -remove">remove</i></span>
                               <ul class="menu__submenu">
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About lorem ipsum el de sol</a></li>
@@ -115,7 +86,7 @@
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
                               </ul>
                             </li>
-                            <li class="menu__item"><span class="menu__link" href="#">Services</span><span class="menu__dropdown"><i class="material-icons">add</i></span>
+                            <li class="menu__item"><span class="menu__link" href="#">Services</span><span class="menu__dropdown"><i class="material-icons -add">add</i> <i class="material-icons -remove">remove</i></span>
                               <ul class="menu__submenu">
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
                                 <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
@@ -127,6 +98,22 @@
                             </li>
                             <li class="menu__item"><a class="menu__link" href="#">FAQ</a></li>
                             <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">FAQ</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">FAQ</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">FAQ</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                            <li class="menu__item"><span class="menu__link" href="#">Services</span><span class="menu__dropdown"><i class="material-icons -add">add</i> <i class="material-icons -remove">remove</i></span>
+                              <ul class="menu__submenu">
+                                <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
+                                <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
+                                <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
+                                <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
+                                <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
+                                <li class="menu__subitem"><a class="menu__sublink" href="#">About</a></li>
+                              </ul>
+                            </li>
                           </ul>
                         </div>
                         <div class="navigation__toggle">
