@@ -21,8 +21,8 @@
   var banner = {
     init: function () {
       this.catchDOM();
-      if (this.isElement()) {
-        if (this.isSlickInit()) {
+      if (isElement(this.$el)) {
+        if (isSlickInited(this.$el)) {
           this.generateSlick();
         }
         this.setHeight();
@@ -42,12 +42,6 @@
       this.$header = $('.js-header');
       this.$headerBox = this.$header.find('.header__box');
       this._headerHeight = this.$header.height();
-    },
-    isElement: function () {
-      return this.$el.length > 0
-    },
-    isSlickInit: function () {
-      return this.$el.hasClass('js-banner-slick')
     },
 
     //SLICK
@@ -139,6 +133,14 @@
       }
     }
   };
+
+  function isElement(item) {
+    return item.length > 0
+  }
+
+  function isSlickInited(item) {
+    return item.hasClass('js-banner-slick')
+  }
 
   banner.init();
 })();
