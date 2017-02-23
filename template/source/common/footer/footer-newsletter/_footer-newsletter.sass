@@ -1,4 +1,9 @@
 .footer-newsletter
+  width: 66.66%
+  float: right
+  +MAX(969px)
+    width: 100%
+
   &__title
     +fontOpenSans
     font-size: 13px
@@ -10,33 +15,44 @@
   &__inputbox
     display: flex
     margin-bottom: 10px
+    +MAX(600px)
+      flex-wrap: wrap
 
   &__input
+    +fontMontserrat
     outline: none
-    width: 100%
+    width: 50%
     border: 0
     padding: 0 14px
-    font-weight: 600
-    font-size: 16px
+    font-weight: 400
+    font-size: 14px
     color: #192431
+    margin-right: 5px
+    height: 49px
 
-    border-top-left-radius: 7px
-    border-bottom-left-radius: 7px
+    border-radius: 7px
+
+    +MAX(600px)
+      width: 100%
+      margin-bottom: 10px
 
   &__submit
     transition: background-color .15s ease-in-out
-    background-color: #82ca9c
+    +fontMontserrat
+    font-size: 15px
+    font-weight: 600
+    background-color: #a2ca28
     color: white
     border: 0
-    height: 60px
-    width: 60px
+    height: 49px
+    width: 183px
     cursor: pointer
-    font-size: 16px
 
-    border-top-right-radius: 7px
-    border-bottom-right-radius: 7px
+    border-radius: 7px
+    +MAX(600px)
+      margin: 0 auto
     &:hover
-      background-color: darken(#82ca9c, 10)
+      background-color: darken(#a2ca28, 10)
 
   &__text
     +fontOpenSans

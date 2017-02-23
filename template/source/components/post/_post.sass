@@ -23,6 +23,9 @@
     background-position: center center
     background-size: cover
 
+    +MAX(767px)
+      height: 200px
+
   &__details
     position: relative
     display: block
@@ -41,6 +44,10 @@
     right: 40px
     display: flex
     justify-content: space-between
+    +MAX(767px)
+      top: 15px
+      left: 15px
+      right: 15px
 
   &__label
     +fontMontserrat
@@ -52,6 +59,9 @@
 
     display: flex
     align-items: center
+
+    +MAX(767px)
+      font-size: 9px
 
   &__icon
     margin-left: 10px
