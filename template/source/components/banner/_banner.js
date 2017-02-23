@@ -10,7 +10,7 @@
  *
  * Possible modification
  * # Create a slick-carousel
- * @class .js-banner.js-banner-slick
+ * @class .js-banner.-banner-slick
  * # If Fixed header (modification into .header e.g. [.header.-header-fixed] also [.header.-header-landingPage])
  * @class
  *
@@ -139,7 +139,7 @@
   }
 
   function isSlickInited(item) {
-    return item.hasClass('js-banner-slick')
+    return item.hasClass('-banner-slick')
   }
 
   banner.init();

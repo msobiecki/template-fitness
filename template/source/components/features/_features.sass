@@ -1,0 +1,64 @@
+.features
+  background-color: colors($features-color, background)
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    padding: 55px 0 55px
+
+  &__item
+    width: 25%
+    padding: 0 15px
+    +MAX(969px)
+      width: 50%
+      margin-bottom: 15px
+    +MAX(767px)
+      margin-bottom: 25px
+      width: 100%
+      text-align: center
+
+  &__icon
+    color: colors($features-color)
+    margin-bottom: 5px
+    cursor: default
+    i
+      font-size: 64px
+
+    +MAX(767px)
+      text-align: center
+
+  &__subtitle
+    +fontOpenSans
+    font-size: 24px
+    font-weight: 600
+    color: colors($features-color)
+    margin-bottom: 15px
+    cursor: default
+
+  &__text
+    +fontMontserrat
+    font-size: 14px
+    font-weight: 400
+    color: colors($features-color)
+    margin-bottom: 5px
+    text-align: justify
+    cursor: default
+    +MAX(767px)
+      font-size: 12px
+
+  &__link
+    +fontOpenSans
+    font-size: 13px
+    font-weight: 700
+    display: flex
+    align-items: center
+    color: colors($features-color)
+    i
+      font-size: 12px
+      margin-left: 5px
+    +MAX(767px)
+      display: inline-block

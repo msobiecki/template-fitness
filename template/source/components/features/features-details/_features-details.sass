@@ -1,0 +1,138 @@
+.features-details
+  display: block
+  width: 100%
+
+  &__item
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    background-color: colors($features-color)
+    +MAX(767px)
+      margin-bottom: 15px
+
+  &__imagebox
+    width: 66.66%
+    height: 395px
+    overflow: hidden
+    position: relative
+
+    background-position: center center
+    background-size: cover
+
+    +MAX(969px)
+      width: 50%
+    +MAX(767px)
+      width: 100%
+      height: 200px
+
+    .features-details__item:nth-of-type(odd) &
+      order: 2
+      +MAX(767px)
+        order: 1
+    .features-details__item:nth-of-type(even) &
+      order: 1
+
+  &__image
+    display: block
+    max-width: inherit
+    min-height: 100%
+    min-width: 100%
+
+  &__label
+    position: absolute
+    bottom: 25px
+
+    display: flex
+    align-items: center
+    +MAX(767px)
+      bottom: 10px
+
+    .features-details__item:nth-of-type(odd) &
+      right: 25px
+      +MAX(767px)
+        right: 10px
+    .features-details__item:nth-of-type(even) &
+      left: 25px
+      +MAX(767px)
+        left: 10px
+
+  &__labelText
+    +fontOpenSans
+    font-size: 12px
+    color: colors($features-color)
+    margin-right: 7px
+
+    & > span
+      transition: color .15s ease-in-out
+      .features-details__label:hover &
+        color: colors($features-color, tag)
+
+  &__details
+    width: 33.33%
+    padding: 50px 20px 25px
+    text-align: center
+    +MAX(969px)
+      width: 50%
+    +MAX(767px)
+      width: 100%
+      padding: 15px 15px
+
+    .features-details__item:nth-of-type(odd) &
+      order: 1
+      +MAX(767px)
+        order: 2
+    .features-details__item:nth-of-type(even) &
+      order: 2
+
+  &__tag
+    +fontMontserrat
+    font-size: 14px
+    font-weight: 700
+    color: colors($features-color, tag)
+    text-transform: uppercase
+    margin-bottom: 3px
+    cursor: default
+
+  &__title
+    +fontOpenSans
+    font-size: 35px
+    font-weight: 300
+    color: colors($features-color, background)
+    text-transform: uppercase
+    margin-bottom: 5px
+    cursor: default
+
+  &__text
+    +fontOpenSans
+    font-size: 14px
+    color: colors($features-color, text)
+    margin-bottom: 15px
+    cursor: default
+    line-height: 1.8
+
+  &__icon
+    margin-bottom: 5px
+
+  &__link
+    position: relative
+
+    +fontOpenSans
+    font-size: 14px
+    color: colors($features-color, background)
+    margin-bottom: 15px
+    &:after
+      transition: opacity .15s ease-in-out
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 2px
+      opacity: 0.15
+      width: 100%
+      background-color: colors($features-color, text)
+    &:hover
+      &:after
+        opacity: 0.25
