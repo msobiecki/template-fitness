@@ -25,10 +25,9 @@
         if (isSlickInited(this.$el)) {
           this.generateSlick();
         }
+        this.bindEvents();
         this.setHeight();
-        this.onResize();
         this.toggleHide();
-        this.toggleEvent();
       }
     },
     catchDOM: function () {
@@ -37,14 +36,14 @@
       this.$item = this.$el.find('.banner__item');
       this.$image = this.$el.find('.banner__image');
       this.$toggler = this.$el.find('.banner__toggler');
-      this._windowHeight = $(window).height();
 
       this.$header = $('.js-header');
       this.$headerBox = this.$header.find('.header__box');
-      this._headerHeight = this.$header.height();
     },
-
-    //SLICK
+    bindEvents: function () {
+      $(window).resize(this.setHeight.bind(this));
+      this.$toggler.on('click', this.toggleScroll.bind(this));
+    },
     generateSlick: function () {
       this.$slider.slick({
         slide: '.banner__item',
@@ -67,6 +66,21 @@
       this.onInit();
       this.onChangeSlide();
     },
+    setHeight: function () {
+      if ($('.header.-header-landingPage.-header-fixed').length > 0) {
+        this.$el.css('height', windowHeight());
+        this.$slider.css('height', windowHeight());
+        this.$item.css('height', windowHeight());
+        this.$image.css('height', windowHeight());
+      } else {
+        this.$el.css('height', windowHeight() - elementHeight(this.$header));
+        this.$slider.css('height', windowHeight() - elementHeight(this.$header));
+        this.$item.css('height', windowHeight() - elementHeight(this.$header));
+        this.$image.css('height', windowHeight() - elementHeight(this.$header));
+      }
+    },
+
+
     onInit: function () {
       this.$slider.find('.slick-current .banner__content').addClass('-banner-content-show animated fadeIn');
     },
@@ -78,28 +92,6 @@
       });
     },
 
-    //OnResize
-    onResize: function () {
-      $(window).resize(this.setNewVariables.bind(this))
-    },
-    setNewVariables: function () {
-      this._windowHeight = $(window).height();
-      this._headerHeight = $('header').height();
-      this.setHeight();
-    },
-    setHeight: function () {
-      if ($('.header.-header-landingPage.-header-fixed').length > 0) {
-        this.$el.css('height', this._windowHeight);
-        this.$slider.css('height', this._windowHeight);
-        this.$item.css('height', this._windowHeight);
-        this.$image.css('height', this._windowHeight);
-      } else {
-        this.$el.css('height', this._windowHeight - this._headerHeight);
-        this.$slider.css('height', this._windowHeight - this._headerHeight);
-        this.$item.css('height', this._windowHeight - this._headerHeight);
-        this.$image.css('height', this._windowHeight - this._headerHeight);
-      }
-    },
     toggleHide: function () {
       this.$item.each(function () {
         if ($(this).attr('href')) {
@@ -108,9 +100,6 @@
           $(this).find('.banner__toggler i').addClass('animated infinite pulse');
         }
       })
-    },
-    toggleEvent: function () {
-      this.$toggler.on('click', this.toggleScroll.bind(this))
     },
     toggleScroll: function (event) {
       event.preventDefault();
@@ -136,6 +125,14 @@
 
   function isElement(item) {
     return item.length > 0
+  }
+
+  function windowHeight() {
+    return $(window).height();
+  }
+
+  function elementHeight(item) {
+    return $(item).height();
   }
 
   function isSlickInited(item) {
