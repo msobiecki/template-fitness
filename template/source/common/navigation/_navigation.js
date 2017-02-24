@@ -24,7 +24,7 @@
       this.$button.on('click', this.toggleMenu.bind(this));
       this.$close.on('click', this.toggleMenu.bind(this));
 
-      this.$wrapper.hammer({/* options */}).on("swipeleft", this.swipeMenu.bind(this));
+      this.$wrapper.hammer({touchAction : 'auto'}).on("swipeleft", this.swipeMenu.bind(this));
     },
     resizeEvents: function () {
       $(window).resize(this.closeMenu.bind(this));
