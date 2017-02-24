@@ -1,3 +1,3 @@
-# Template-Take
+# Template-Fitness
 
-![preview](https://i.imgur.com/ORfn645.jpg)
+![preview](https://i.imgur.com/KQwhh2o.jpg)
