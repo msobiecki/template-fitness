@@ -107,6 +107,10 @@
     width: 100%
 
   &__dots
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 10px
     margin: 0 3px
     ul
       display: flex
@@ -126,3 +130,24 @@
 
     &:hover
       background-color: rgba(255, 255, 255, 1)
+
+  &__arrow
+    position: absolute
+    cursor: pointer
+    top: 50%
+    transform: translateY(-50%)
+    color: rgba(255, 255, 255, 0.5)
+    font-size: 36px
+    transition: color 0.3s ease
+
+    &:hover
+      color: rgba(255, 255, 255, 1)
+
+    &.-prev
+      left: 5px
+
+    &.-next
+      right: 5px
+
+    &.slick-disabled
+      opacity: 0

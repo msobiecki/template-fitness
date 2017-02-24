@@ -110,11 +110,6 @@ img {
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 /* Layout
@@ -569,6 +564,11 @@ body {
   width: 100%;
   position: relative;
   background-color: transparent;
+}
+
+.-nav-right-align .menu__submenu {
+  right: 0;
+  left: inherit;
 }
 
 .menu__subitem {
@@ -1051,6 +1051,11 @@ a.banner__item:hover .banner__text {
 }
 
 .banner__dots {
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+  bottom: 10px;
   margin: 0 3px;
 }
 
@@ -1074,6 +1079,33 @@ a.banner__item:hover .banner__text {
 
 .banner__dot:hover {
   background-color: white;
+}
+
+.banner__arrow {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 36px;
+  transition: color 0.3s ease;
+}
+
+.banner__arrow:hover {
+  color: white;
+}
+
+.banner__arrow.-prev {
+  left: 5px;
+}
+
+.banner__arrow.-next {
+  right: 5px;
+}
+
+.banner__arrow.slick-disabled {
+  opacity: 0;
 }
 
 .features {

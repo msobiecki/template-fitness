@@ -31,7 +31,20 @@
       var _this = $(e.currentTarget);
       if (!isMobile()) {
         this.$item.not(_this).removeClass('-nav-active');
-        _this.addClass('-nav-active -nav-mouse')
+        _this.addClass('-nav-active -nav-mouse');
+
+
+        this.checkOffsetSubmenu(_this);
+      }
+    },
+    checkOffsetSubmenu: function (item) {
+      var submenu = item.find('.menu__submenu');
+      if(submenu.length > 0){
+        var leftOffset = submenu.offset().left;
+        var rightOffset = $(window).width() - (leftOffset + submenu.outerWidth())
+        if (rightOffset < 0){
+          item.addClass('-nav-right-align')
+        }
       }
     },
     closeMenu: function (e) {

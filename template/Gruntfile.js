@@ -7,7 +7,9 @@ module.exports = function(grunt) {
   var vendorScripts = [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
-    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
+    'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+    'node_modules/hammerjs/hammer.min.js',
+    'node_modules/jquery-hammerjs/jquery.hammer.js'
   ];
 
   grunt.initConfig({
