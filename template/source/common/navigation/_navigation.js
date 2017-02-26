@@ -1,10 +1,13 @@
 (function () {
+  var _breakdown = 1024;
+
   var navigation = {
     init: function () {
       this.catchDOM();
       if (isElement(this.$el)) {
         this.bindEvents();
         this.resizeEvents();
+        this.checkTypeOfMenu();
         this.setMenuPosition();
         this.setCustomScroll();
       }
@@ -13,6 +16,7 @@
       this.$el = $('.js-navigation');
       this.$button = this.$el.find('.navigation-toggle');
       this.$navigationMenu = this.$el.find('.navigation__menu');
+      this.$navigationToggle = this.$el.find('.navigation__toggle');
       this.$wrapper = $('.js-wrapper');
       this.$wrapperNavigation = this.$wrapper.find('.wrapper__navigation');
       this.$wrappedMenu = this.$wrapper.find('.wrapper__menu');
@@ -24,11 +28,12 @@
       this.$button.on('click', this.toggleMenu.bind(this));
       this.$close.on('click', this.toggleMenu.bind(this));
 
-      this.$wrapper.hammer({touchAction : 'auto'}).on("swipeleft", this.swipeMenu.bind(this));
+      this.$wrapper.hammer({touchAction: 'auto'}).on("swipeleft", this.swipeMenu.bind(this));
     },
     resizeEvents: function () {
       $(window).resize(this.closeMenu.bind(this));
       $(window).resize(this.setMenuPosition.bind(this));
+      $(window).resize(this.checkTypeOfMenu.bind(this));
     },
     toggleMenu: function () {
       var _this = this.$button;
@@ -66,20 +71,33 @@
       }
     },
     setMenuPosition: function () {
+      //console.log(isMobile());
       if (isMobile()) {
         if (this.$navigationMenu.children().length > 0) {
           var _menu = this.$menu.detach();
           this.$wrappedMenu.append(_menu)
+          this.$navigationToggle.css('display', 'flex');
+          this.$navigationMenu.css('display', 'none');
         }
       } else {
         if (this.$wrappedMenu.children().length > 0) {
           var _menu = this.$menu.detach();
           this.$navigationMenu.append(_menu)
+          this.$navigationToggle.css('display', '');
+          this.$navigationMenu.css('display', '');
         }
       }
     },
     setCustomScroll: function () {
       this.$wrapperNavigation.mCustomScrollbar({scrollbarPosition: "outside"});
+    },
+    checkTypeOfMenu: function () {
+      //console.log(this.$navigationMenu.width());
+      //console.log($(window).width() * (3 / 4));
+      if ((this.$navigationMenu.width() > ($(window).width() * (3 / 4))) && _breakdown < $(window).width()) {
+        console.log(_breakdown)
+        _breakdown = $(window).width();
+      }
     }
   };
 
@@ -88,7 +106,8 @@
   }
 
   function isMobile() {
-    return $(window).width() <= 1024
+    console.log(_breakdown);
+    return $(window).width() <= _breakdown
   }
 
   navigation.init();
