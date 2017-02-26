@@ -413,30 +413,30 @@ body {
 }
 
 .navigation-toggle__inner {
-  transition: color .5s ease-in-out;
+  transition: background-color .5s ease-in-out !important;
   background-color: white;
 }
 
 .-header-landingPage-background .navigation-toggle__inner {
-  background: #4b4e53;
+  background-color: #4b4e53;
 }
 
 .navigation-toggle__inner:after {
-  transition: color .5s ease-in-out;
+  transition: background-color .5s ease-in-out !important;
   background-color: white;
 }
 
 .-header-landingPage-background .navigation-toggle__inner:after {
-  background: #4b4e53;
+  background-color: #4b4e53;
 }
 
 .navigation-toggle__inner:before {
-  transition: color .5s ease-in-out;
+  transition: background-color .5s ease-in-out !important;
   background-color: white;
 }
 
 .-header-landingPage-background .navigation-toggle__inner:before {
-  background: #4b4e53;
+  background-color: #4b4e53;
 }
 
 .menu {
@@ -1039,20 +1039,6 @@ a.banner__item:hover .banner__text {
   font-size: 48px;
   line-height: 1;
   color: white;
-}
-
-.banner__toolbar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  width: 100%;
 }
 
 .banner__dots {
