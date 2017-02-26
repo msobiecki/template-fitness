@@ -71,7 +71,6 @@
       }
     },
     setMenuPosition: function () {
-      //console.log(isMobile());
       if (isMobile()) {
         if (this.$navigationMenu.children().length > 0) {
           var _menu = this.$menu.detach();
@@ -92,10 +91,7 @@
       this.$wrapperNavigation.mCustomScrollbar({scrollbarPosition: "outside"});
     },
     checkTypeOfMenu: function () {
-      //console.log(this.$navigationMenu.width());
-      //console.log($(window).width() * (3 / 4));
       if ((this.$navigationMenu.width() > ($(window).width() * (3 / 4))) && _breakdown < $(window).width()) {
-        console.log(_breakdown)
         _breakdown = $(window).width();
       }
     }
@@ -106,7 +102,6 @@
   }
 
   function isMobile() {
-    console.log(_breakdown);
     return $(window).width() <= _breakdown
   }
 
